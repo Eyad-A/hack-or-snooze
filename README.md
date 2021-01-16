@@ -1,0 +1,2 @@
+# Hack or Snooze
+A Hacker News clone built with jQuery using the Hack or Snooze API. It allows users to login or sign up for an account where they can create, delete, favorite, and unfavorite stories. 
