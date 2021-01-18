@@ -222,32 +222,6 @@ class User {
     await this.getUserDetails();
     return this;
   }
-
-  // Update the user
-  async update(userData) {
-    const response = await axios({
-      method: "patch",
-      url: `${BASE_URL}/users/${this.username}`,
-      data: {
-        token: this.loginToken,
-        user: userData 
-      }
-    });
-    // update name
-    this.name = response.data.user.name;
-    return this;
-  }
-
-  // delete a user 
-  async remove() {
-    await axios({
-      method: "DELETE",
-      url: `${BASE_URL}/users/${this.username}`,
-      data: {
-        token: this.loginToken 
-      }
-    });
-  }
 }
 
 /**
